@@ -112,6 +112,15 @@ header a:hover{
 #contact-us-btn:hover{
     background-image: linear-gradient(135deg,#1F77B4  0%, #63AAE3 100%);
 }
+.get-started {
+    color: white;
+    background-image: linear-gradient(135deg, #63AAE3 0%, #1F77B4 100%);
+    padding: 8px 33px;
+    font-size: 18px;
+    
+    border: none;
+    border-radius: 10px;
+}
 
 
 
@@ -227,6 +236,7 @@ ul li a{
 footer form{
     display: flex;
     margin-top: 13px;
+    gap: 18px;
 }
 footer form input{
     background-color: #060B0E;
@@ -321,5 +331,11 @@ form  input,#submit{
     .info-block h1{
         margin: 15px 0;
         font-size: 25px;
+    }
+    footer img{
+        width: 250px;
+    }
+    footer form{
+        flex-direction: column;
     }
 }

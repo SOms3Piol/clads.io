@@ -34,8 +34,7 @@
             </div>
             <div class="lg-nav-links">
                 <div>
-                    <a href="https://facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+            
                 <a href="https://facebook.com"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
                 <a href="/contact.html" id="contact-us-btn">Contact Us</a>
@@ -50,9 +49,10 @@
             </button>
             <ul id="mbl-menu" class="mbl-menu">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/contact.html">Contact Us</a></li>
-                <li><a href="/service.html">Services</a></li>
                 <li><a href="/about.html">About US</a></li>
+                <li><a href="/service.html">Services</a></li>
+                <li><a href="/contact.html">Contact Us</a></li>
+               
             </ul>
         </nav>
 
@@ -73,9 +73,7 @@
                 <h1>+1 (571) 335-5962</h1>
                 <div class="icons-group animation-card">
                   
-                    <a href="https://www.instagram.com/" target="__blank" class="icon">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+                    <a href="https://facebook.com" target="_blank" class="icon"><i class="fa-brands fa-linkedin"></i></a>
                     
                 </div>
             </div>
@@ -105,13 +103,13 @@
         </div>
         <ul>
             <li><a href="/index.html">Home</a></li>
-            <li><a href="/services.html">Services</a></li>
+            <li><a href="/service.html">Services</a></li>
             <li><a href="/contact.html">Contact Us</a></li>
             <li><a href="/about.html">About Us</a></li>
         </ul>
         <div>
             <h2>Subscribe For More Latest Information By Us.</h2>
-            <form>
+            <form action="">
                 <input type="email" required placeholder="Email">
                 <button id="submit" class="get-started" type="submit">Sign Up</button>
             </form>
@@ -122,6 +120,50 @@
 
 
     <script src="script/script.js"></script>
+
+
+
+
+    <script>
+        function prepareEmail() {
+            // Helper function to sanitize user input using regex
+            function sanitizeInput(input) {
+                return input.replace(/<[^>]*>?/gm, '').trim(); // Remove HTML tags and extra spaces
+            }
+    
+            // Get the form data using plain JavaScript
+            const name = sanitizeInput(document.querySelector('input[name="name"]').value);
+            const email = sanitizeInput(document.querySelector('input[name="email"]').value);
+            const phone = sanitizeInput(document.querySelector('input[name="phone"]').value);
+            const subject = sanitizeInput(document.querySelector('input[name="subject"]').value);
+            const query = sanitizeInput(document.querySelector('textarea[name="query"]').value);
+    
+            // Basic validation for required fields
+            if (!name || !email || !phone || !subject || !query) {
+                alert("All fields are required.");
+                return false;
+            }
+    
+            // Validate email format
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            // Create the mailto URL with sanitized form data
+            const mailtoLink = "mailto:info@clads.io?subject=" + encodeURIComponent(subject) +
+                               "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\nPhone: " + phone + 
+                               "\nSubject: " + subject + "\n\n" + "Query: " + query);
+    
+            // Set the action of the form to the new mailto link
+            document.querySelector('form').setAttribute('action', mailtoLink);
+    
+            // Return true to allow form submission to proceed
+            return true;
+        }
+    </script>
+    
 
 
 </body>

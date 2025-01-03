@@ -96,7 +96,7 @@ header a:hover{
 
 
 .banner{
-    background-image: url('https://shine.creativemox.com/sentinelpro/wp-content/uploads/sites/12/2024/08/cyber-security-team-conducting-cyber-surveillance-and-threat-detection.jpg');
+    background-image: url('../assets/about-banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -242,6 +242,7 @@ ul li a{
 form{
     display: flex;
     margin-top: 13px;
+    gap: 18px;
 }
 form input{
     background-color: #060B0E;
@@ -256,6 +257,7 @@ form  input,#submit{
     flex-grow: 1;
     flex-basis: 200;
 }
+
 
 
 
@@ -420,6 +422,12 @@ form  input,#submit{
     }
     footer img{
         width: 250px;
+    }
+    footer form {
+        flex-direction: column;
+    }
+    #submit{
+        width: 100%;
     }
 
 }
