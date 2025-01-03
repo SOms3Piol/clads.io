@@ -1,0 +1,270 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-decoration: none;
+   
+}
+
+body{
+    background-color: #0D161C;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: transparent;
+    padding: 8px 13px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 8px;
+    position: relative;
+}
+.lg-img{
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.lg-img div {
+    height: 55px;
+    width: 305px;
+}
+.lg-img div > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+header a{
+    color: white;
+    transition: ease .4s;
+}
+header a:hover{
+    color: #223A4A;
+}
+.lg-nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 33px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.lg-nav-links div{
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+}
+.lg-nav-links div > a{
+    color: white;
+    background-color: #223A4A;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #42708f;
+}
+.lg-nav-links a:hover{
+    background-color: #42708f;
+}
+
+.mbl-img , .mbl-button , .mbl-menu{
+    display: none;
+}
+
+#contact-us-btn{
+    background-image: linear-gradient(135deg, #63AAE3 0%, #1F77B4 100%);
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 33px;
+    font-size: 19px;
+}
+#contact-us-btn:hover{
+    background-image: linear-gradient(135deg,#1F77B4  0%, #63AAE3 100%);
+}
+
+
+.blog{
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-top: 135px;
+    padding: 13p 8px;
+}
+.blog img{
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.blog h1,h2,h3,h4,h5,h6{
+    color: white;
+    margin: 10px 0px;
+}
+.blog p{
+    color: slategray;
+    margin: 8px 0;
+}
+
+
+.blog ol li {
+    color: slategray;
+    margin: 8px 35px;
+}
+.blog ol li strong{
+    margin: 8px 0;
+    color: white;
+}
+.blog ul li{
+    margin: 8px 35px;
+    color: slategray;
+}
+
+.blog ul li strong{
+    margin: 8px 0;
+    color: white;
+}
+
+
+
+.get-started {
+    color: white;
+    background-image: linear-gradient(135deg, #63AAE3 0%, #1F77B4 100%);
+    padding: 8px 33px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+
+
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 63px 33px;
+    background-color: #0D161C;
+    flex-wrap: wrap;
+    gap: 53px;
+
+}
+footer div,ul{
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+footer p{
+    color: slategray;
+}
+footer h2{
+    color: white;
+}
+footer ul{
+    display: flex;
+    gap: 33px;
+    align-items: center;
+    
+    list-style: none;
+}
+
+footer ul li a{
+    color: white;
+
+}
+form{
+    display: flex;
+    margin-top: 13px;
+    gap: 18px;
+}
+form input{
+    background-color: #060B0E;
+    padding: 13px 8px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+form  input,#submit{
+    flex-grow: 1;
+    flex-basis: 200;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:850px) {
+    
+    .lg-img, .lg-nav-links{
+        display: none;
+    }
+    .mbl-img{
+        display: block;
+        height: 55px;
+        width: 305px;
+    }
+    .mbl-menu{
+        width: 97%;
+        position: absolute;
+        background-color: #223A4A;
+        top: 84px;
+        padding: 8px 13px;
+    }
+    .mbl-menu.open{
+        display: block;
+    }
+    .mbl-menu li{
+        margin-top: 13px;
+        text-align: right;
+    }
+    .mbl-menu li a:hover{
+        color: #1F77B4;
+    }
+    .mbl-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .mbl-button{
+        display: block;
+        padding: 0 13px;
+        font-size: 29px;
+        background-color: #223A4A;
+        border: none;
+        color: #42708f;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+   
+    footer img{
+        width: 250px;
+    }
+    footer form {
+        flex-direction: column;
+    }
+    #submit{
+        width: 100%;
+    }
+
+}
