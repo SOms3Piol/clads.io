@@ -384,7 +384,7 @@ header a:hover{
     display: flex;
     flex-direction: column;
     gap: 23px;
-    font-size: 40px;
+    font-size: 19px;
 }
 .contact-links{
     display: flex;
